@@ -31,7 +31,7 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@poly-state/poly-state@^0.3.0":
+"@poly-state/poly-state@latest":
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/@poly-state/poly-state/-/poly-state-0.3.0.tgz#ca80625f44ce7d6d4383d0a12e03bc4d7af22bfe"
   integrity sha512-FZrM729hWGdUF9CyP9Jmyj5qYFgxDsAe/2f8JSowKUiQUVw7Mm931tsGIYErDHBCIu28PSgJhKMr/fFfkqwWSA==
