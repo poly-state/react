@@ -30,7 +30,7 @@ export const [useCounterStore, useCounterStoreSelector] = createStoreHooks(count
 
 > On Component level
 
-```ts
+```tsx
 const TestComponent = () => {
 	const count = useCounterStoreSelector('count');
 
