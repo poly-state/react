@@ -1,11 +1,12 @@
 import { ReturnStoreType, StateConstraint } from '@poly-state/poly-state';
 import { useEffect, useRef, useState } from 'react';
+import { DeepReadonly } from 'ts-essentials';
 
 export const useStoreSelector = <T extends StateConstraint, U extends keyof T>(
 	store: ReturnStoreType<T>,
 	key: U
-): T[U] => {
-	const [state, setState] = useState(store.getState()[key]);
+): T extends StateConstraint ? DeepReadonly<T[U]> : never => {
+	const [state, setState] = useState(store.getState()[key as keyof DeepReadonly<T>]);
 
 	const subscriberRef = useRef<() => void>();
 
@@ -15,7 +16,7 @@ export const useStoreSelector = <T extends StateConstraint, U extends keyof T>(
 			subscriberRef.current();
 		}
 
-		subscriberRef.current = store.subscribeKey(key, setState);
+		subscriberRef.current = store.subscribeKey(key as keyof T, setState as any);
 
 		return () => {
 			if (subscriberRef?.current) {
