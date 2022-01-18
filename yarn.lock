@@ -31,10 +31,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@poly-state/poly-state@^0.8.1":
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/@poly-state/poly-state/-/poly-state-0.8.1.tgz#c115d70c66eb5f7e7d6416eb43b112f8506c52d9"
-  integrity sha512-L5cTF0N51p1BtS3yvlpYztKJzy85SlYQQOT0div/mB5aj2FujumSaiu87mWpDu1FaTYAN8LtdZ2ZjxCk3LxSTw==
+"@poly-state/poly-state@^0.8.2":
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/@poly-state/poly-state/-/poly-state-0.8.2.tgz#57870b0b8dccec98d4c6ca797d9994874cfc025a"
+  integrity sha512-qJwPHOef1e7BtbdGHxsn8RZhynWU6Yy3X1RvaTJ6ayZFJA/zW/2tDFtAS6lx+62va0A8Uggl29Jgp7aeOSumFg==
   dependencies:
     lodash "^4.17.21"
     ts-essentials "^9.1.2"

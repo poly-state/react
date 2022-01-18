@@ -7,6 +7,6 @@ type UseStoreSelector<T> = (key: keyof T) => DeepReadonly<T[keyof T]>;
 
 export const createStoreHooks = <T extends StateConstraint>(
 	store: ReturnStoreType<T>
-): [UseStore<DeepReadonly<T>>, UseStoreSelector<T>] => {
+): [UseStore<T>, UseStoreSelector<T>] => {
 	return [() => useStore(store), (key: keyof T) => useStoreSelector(store, key)];
 };
