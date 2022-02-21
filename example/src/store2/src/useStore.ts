@@ -3,6 +3,14 @@ import { useEffect, useState } from 'react';
 
 export const useStore = <T extends StateConstraint>(store: ReturnStoreType<T>) => {
 	const [state, setState] = useState(store.getState());
-	useEffect(() => store.subscribe(setState), [store]);
+	console.log(state);
+	useEffect(
+		() =>
+			store.subscribe((v) => {
+				console.log(v);
+				setState(v);
+			}),
+		[store]
+	);
 	return state;
 };

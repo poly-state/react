@@ -31,13 +31,10 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@poly-state/poly-state@^0.8.2":
-  version "0.8.2"
-  resolved "https://registry.yarnpkg.com/@poly-state/poly-state/-/poly-state-0.8.2.tgz#57870b0b8dccec98d4c6ca797d9994874cfc025a"
-  integrity sha512-qJwPHOef1e7BtbdGHxsn8RZhynWU6Yy3X1RvaTJ6ayZFJA/zW/2tDFtAS6lx+62va0A8Uggl29Jgp7aeOSumFg==
-  dependencies:
-    lodash "^4.17.21"
-    ts-essentials "^9.1.2"
+"@poly-state/poly-state@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@poly-state/poly-state/-/poly-state-1.0.0.tgz#f61f7cd1a3014b942364eac7a2ae78ddbfa9b8ab"
+  integrity sha512-7qvgnlh3R6AexlzEjsNX3Vbb/u8BMmrMAUp8yP2m+yVrIjuc0oK8XT+QRCrDSgdQ98vxB8ua22bFiaDTSHOiTw==
 
 "@types/prop-types@*":
   version "15.7.4"
@@ -444,11 +441,6 @@ lodash.merge@^4.6.2:
   resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
 
-lodash@^4.17.21:
-  version "4.17.21"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
-  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
-
 loose-envify@^1.1.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
@@ -589,11 +581,6 @@ text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
-
-ts-essentials@^9.1.2:
-  version "9.1.2"
-  resolved "https://registry.yarnpkg.com/ts-essentials/-/ts-essentials-9.1.2.tgz#46db6944b73b4cd603f3d959ef1123c16ba56f59"
-  integrity sha512-EaSmXsAhEiirrTY1Oaa7TSpei9dzuCuFPmjKRJRPamERYtfaGS8/KpOSbjergLz/Y76/aZlV9i/krgzsuWEBbg==
 
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"
