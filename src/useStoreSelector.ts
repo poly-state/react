@@ -10,19 +10,12 @@ export const useStoreSelector = <T extends StateConstraint, U extends keyof T>(
 	const subscriberRef = useRef<() => void>();
 
 	useEffect(() => {
-		//clean up previous listeners if dependencies change
-		if (subscriberRef.current) {
-			subscriberRef.current();
-		}
-
+		//clean up previous listener if dependencies change
+		subscriberRef.current?.();
 		subscriberRef.current = store.subscribeKey(key as keyof T, setState as any);
-
-		return () => {
-			if (subscriberRef?.current) {
-				subscriberRef.current();
-			}
-		};
 	}, [store, key]);
+
+	useEffect(() => () => subscriberRef.current?.());
 
 	return state;
 };

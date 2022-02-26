@@ -1,6 +1,6 @@
 import './App.css';
 import logo from './logo.svg';
-import { counterStore, useCounterStoreSelector } from './store/counterStore';
+import { counterStore, useCounterStoreSelector } from './stores/counterStore';
 
 function App() {
 	const count = useCounterStoreSelector('count');
