@@ -1,8 +1,8 @@
 import '@testing-library/jest-dom';
 import * as tester from '@testing-library/react';
-import { Counter } from '../components/counter';
-test('Simple Counter Test', () => {
-	const { container } = tester.render(<Counter />);
+import { CounterWithSelector } from '../components/counterWithSelector';
+test('Simple Counter Test With useSelector Hook', () => {
+	const { container } = tester.render(<CounterWithSelector />);
 	const h1 = container.querySelector('h1');
 	expect(h1).toBeInTheDocument();
 

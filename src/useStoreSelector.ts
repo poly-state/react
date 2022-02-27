@@ -6,16 +6,15 @@ export const useStoreSelector = <T extends StateConstraint, U extends keyof T>(
 	key: U
 ): T extends StateConstraint ? T[U] : never => {
 	const [state, setState] = useState(store.getState()[key]);
-
 	const subscriberRef = useRef<() => void>();
 
 	useEffect(() => {
 		//clean up previous listener if dependencies change
 		subscriberRef.current?.();
-		subscriberRef.current = store.subscribeKey(key as keyof T, setState as any);
+		subscriberRef.current = store.subscribeKey(key as keyof T, (v) => setState(v as T[U]));
 	}, [store, key]);
 
-	useEffect(() => () => subscriberRef.current?.());
+	useEffect(() => () => subscriberRef.current?.(), []);
 
 	return state;
 };

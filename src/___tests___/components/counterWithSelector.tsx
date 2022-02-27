@@ -1,8 +1,7 @@
-import { FC } from 'react';
-import { counterStore, useCounterStore } from '../stores/counter.store';
+import { counterStore, useCounterSelector } from '../stores/counter.store';
 
-export const Counter: FC = () => {
-	const { count } = useCounterStore();
+export const CounterWithSelector = () => {
+	const count = useCounterSelector('count');
 
 	return (
 		<div>
