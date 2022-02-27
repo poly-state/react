@@ -64,6 +64,5 @@
 		},
 		"testRegex": "src/___tests___/.*\\.spec\\.tsx?$",
 		"testEnvironment": "jsdom"
-	},
-	"type": "module"
+	}
 }
