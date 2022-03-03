@@ -560,10 +560,10 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@poly-state/poly-state@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@poly-state/poly-state/-/poly-state-1.1.2.tgz#d74ab50e1b815eb833ca1acfa46ad11c2d2c46c9"
-  integrity sha512-KYIxfToOo7P68fOhj8mBDrEzbnkMY/mbpwrO1Uc5aXd50oQVUotYzhdnI5EbrlmViR/FswJHilQf/dyqhmKTmQ==
+"@poly-state/poly-state@1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@poly-state/poly-state/-/poly-state-1.1.3.tgz#e59dc53fc8f12dca02a92da44ca020878cea2ec2"
+  integrity sha512-nS0AfGgSefCnYuoE7pCOcAd2iTdX41TB78PYeKbnnwan+yUFTFFxWW+JnOQr7ThCuKg2k9NIdBPb1C2fD+UZFQ==
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.3"
