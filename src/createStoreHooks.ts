@@ -6,10 +6,15 @@ type UseStoreSelectorHook<T extends StateConstraint> = <U extends keyof T>(
 	key: U
 ) => U extends keyof T ? T[U] : never;
 
-type UseStoreHook<T extends StateConstraint> = () => T;
+type UseStoreHook<T extends StateConstraint, Selected = T> = (
+	selector?: (value: T) => Selected,
+	equalityChecker?: (a: Selected, b: Selected) => boolean
+) => Selected;
 
-export const createStoreHooks = <T extends StateConstraint>(
+export const createStoreHooks = <T extends StateConstraint, Selected = T>(
 	store: ReturnStoreType<T>
-): [UseStoreHook<T>, UseStoreSelectorHook<T>] => {
-	return [() => useStore(store), (key: keyof T) => useStoreSelector(store, key)];
-};
+) => [
+	(selector?: (v: T) => Selected, equalityChecker?: (a: Selected, b: Selected) => boolean) =>
+		useStore(store, selector, equalityChecker),
+	(key: keyof T) => useStoreSelector(store, key),
+];
