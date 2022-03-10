@@ -1,6 +1,6 @@
 {
 	"name": "@poly-state/react",
-	"version": "1.2.2",
+	"version": "1.2.3",
 	"description": "React bindings for React",
 	"main": "dist/index.js",
 	"repository": "https://github.com/poly-state/react.git",
