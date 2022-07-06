@@ -1,6 +1,8 @@
 import { createStore } from '@poly-state/poly-state';
-import { createStoreHooks } from '../..';
+import { useStore } from '../../useStore';
+import { createStoreSelector } from '../../useStoreSelector';
 
 export const counterStore = createStore({ count: 0 });
 
-export const [useCounterStore, useCounterSelector] = createStoreHooks(counterStore);
+export const useCounterSelector = createStoreSelector(counterStore);
+export const useCounterStore = () => useStore(counterStore);

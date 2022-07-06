@@ -1,5 +1,6 @@
 import { createStore } from '@poly-state/poly-state';
-import { createStoreHooks } from '../..';
+import { useStore } from '../../useStore';
+import { createStoreSelector } from '../../useStoreSelector';
 
 const initialState: State = {
 	accessToken: '',
@@ -25,4 +26,5 @@ type State = {
 
 export const authStore = createStore(initialState);
 
-export const [useAuthStore, useAuthStoreSelector] = createStoreHooks(authStore);
+export const useAuthStoreSelector = createStoreSelector(authStore);
+export const useAuthStore = () => useStore(authStore);

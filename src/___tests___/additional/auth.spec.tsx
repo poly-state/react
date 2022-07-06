@@ -1,5 +1,6 @@
 import '@testing-library/jest-dom';
 import * as tester from '@testing-library/react';
+import { act } from 'react-dom/test-utils';
 import { AuthComponent } from '../components/authComponent';
 test('Auth Store Tests', () => {
 	const { container } = tester.render(<AuthComponent />);
@@ -13,7 +14,7 @@ test('Auth Store Tests', () => {
 	const loginButton = login.querySelector('button') as HTMLButtonElement;
 	expect(loginButton).toBeInTheDocument();
 
-	loginButton.click();
+	act(() => loginButton.click());
 
 	const updatedLogin = container.querySelector('#login') as HTMLDivElement;
 	const updatedUserInfo = container.querySelector('#userInfo') as HTMLDivElement;
@@ -30,7 +31,7 @@ test('Auth Store Tests', () => {
 	expect(userId.textContent).toBe('123');
 
 	const updateUserNameButton = updatedUserInfo.querySelector('button') as HTMLButtonElement;
-	updateUserNameButton.click();
+	act(() => updateUserNameButton.click());
 
 	expect(userName.textContent).toBe('JSON');
 

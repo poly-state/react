@@ -69,6 +69,7 @@
 		"testEnvironment": "jsdom"
 	},
 	"dependencies": {
+		"jest-environment-jsdom": "^28.1.2",
 		"use-sync-external-store": "^1.0.0-rc.0"
 	}
 }
