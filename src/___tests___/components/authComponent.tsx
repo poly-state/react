@@ -2,7 +2,7 @@ import { FC, useEffect, useState } from 'react';
 import { authStore, useAuthStoreSelector } from '../stores/auth.store';
 
 const UserInfoComponent: FC = () => {
-	const userInfo = useAuthStoreSelector('userInfo');
+	const userInfo = useAuthStoreSelector((state) => state.userInfo);
 
 	return (
 		<div id='userInfo'>
@@ -43,7 +43,7 @@ const LoginComponent: FC = () => {
 const AccessTokenComponent = () => {
 	const [reRenderCount, setRerenderCount] = useState(0);
 
-	const accessToken = useAuthStoreSelector('accessToken');
+	const accessToken = useAuthStoreSelector((state) => state.accessToken);
 
 	useEffect(() => setRerenderCount((c) => c + 1), []);
 
@@ -56,7 +56,7 @@ const AccessTokenComponent = () => {
 };
 
 export const AuthComponent: FC = () => {
-	const isLoggedIn = useAuthStoreSelector('isLoggedIn');
+	const isLoggedIn = useAuthStoreSelector((s) => s.isLoggedIn);
 
 	return (
 		<div>

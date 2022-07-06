@@ -1,5 +1,6 @@
 import '@testing-library/jest-dom';
 import * as tester from '@testing-library/react';
+import { act } from 'react-dom/test-utils';
 import { Counter } from '../components/counter';
 test('Simple Counter Test', () => {
 	const { container } = tester.render(<Counter />);
@@ -13,20 +14,20 @@ test('Simple Counter Test', () => {
 
 	expect(h1).toHaveTextContent('count is 0');
 
-	incrementButton.click();
+	act(() => incrementButton.click());
 	expect(h1).toHaveTextContent('count is 1');
 
-	decrementButton.click();
+	act(() => decrementButton.click());
 	expect(h1).toHaveTextContent('count is 0');
 
 	for (let i = 0; i < 10; i++) {
-		incrementButton.click();
+		act(() => incrementButton.click());
 	}
 
 	expect(h1).toHaveTextContent('count is 10');
 
 	for (let i = 0; i < 10; i++) {
-		decrementButton.click();
+		act(() => decrementButton.click());
 	}
 
 	expect(h1).toHaveTextContent('count is 0');

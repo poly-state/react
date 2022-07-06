@@ -1,7 +1,7 @@
 import { counterStore, useCounterSelector } from '../stores/counter.store';
 
 export const CounterWithSelector = () => {
-	const count = useCounterSelector('count');
+	const count = useCounterSelector((state) => state.count);
 
 	return (
 		<div>
