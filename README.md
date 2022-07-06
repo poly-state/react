@@ -1,6 +1,6 @@
 # React bindings for Poly state
 
-# How to install
+## How to install
 
 ```bash
 
@@ -10,34 +10,34 @@ yarn add @poly-state/react
 
 ```
 
-# Example
+## Example
 
 ```ts
 import { createStore } from '@poly-state/poly-state';
-import { createStoreHooks } from '@poly-state/react';
+import { createStoreSelector } from '@poly-state/react';
 
 export type CounterStoreType = {
-	count: number;
+ count: number;
 };
 
 export const counterStoreInitialState: CounterStoreType = {
-	count: 0,
+ count: 0,
 };
 
 export const counterStore = createStore(counterStoreInitialState);
-export const [useCounterStore, useCounterStoreSelector] = createStoreHooks(counterStore);
+export const useCounterStoreSelector = createStoreSelector(counterStore);
 ```
 
 > On Component level
 
 ```tsx
 const TestComponent = () => {
-	const count = useCounterStoreSelector('count');
+ const count = useCounterStoreSelector(state => state.count);
 
-	const increment = () => {
-		counterStore.setCount((prev) => prev + 1);
-	};
+ const increment = () => {
+  counterStore.setCount((prev) => prev + 1);
+ };
 
-	return <h1 onClick={increment}>{count}</h1>;
+ return <h1 onClick={increment}>{count}</h1>;
 };
 ```
